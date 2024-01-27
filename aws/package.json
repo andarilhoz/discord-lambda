@@ -1,0 +1,16 @@
+{
+    "name": "aws-lambda-server-management",
+    "version": "1.0.0",
+    "description": "AWS server management functions by lambda",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "@aws-sdk/client-ec2": "^3.0.0",
+      "@aws-sdk/client-cost-explorer": "^3.0.0",
+      "tweetnacl": "^1.0.3"
+    },
+    "author": "",
+    "license": "ISC"
+  }

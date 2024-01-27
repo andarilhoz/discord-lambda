@@ -1,0 +1,15 @@
+{
+    "name": "discord-bot-commands",
+    "version": "1.0.0",
+    "description": "A script to add commands to a Discord bot",
+    "main": "addcommand.js",
+    "scripts": {
+      "start": "node addcommand.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^0.27.2",
+      "dotenv": "^16.0.1"
+    }
+  }
