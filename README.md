@@ -5,8 +5,8 @@ Este projeto é um bot do Discord que gerencia um servidor AWS. Ele pode iniciar
 ## Comandos
 
 - `foo`: Retorna 'bar'.
-- `startpalworld`: Inicializa o PalworldServer.
-- `stoppalworld`: Para o PalworldServer.
+- `startserver`: Inicializa o Server.
+- `stopserver`: Para o Server.
 - `status`: Obtém o status do servidor.
 - `getcost`: Obtém o custo mensal do servidor.
 
@@ -23,6 +23,7 @@ Este projeto é um bot do Discord que gerencia um servidor AWS. Ele pode iniciar
     - `BOT_TOKEN`: Seu token de bot Discord.
     - `PUBLIC_KEY`: Sua chave pública.
     - `INSTANCE_ID`: Seu ID de instância AWS.
+    - `AWS_REGION`: Sua regiao da AWS
 
 ## Discord
 

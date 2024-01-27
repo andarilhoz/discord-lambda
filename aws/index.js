@@ -3,8 +3,8 @@ const { CostExplorer, GetCostAndUsageCommand } = require('@aws-sdk/client-cost-e
 const nacl = require('tweetnacl');
 
 
-const ec2Client = new EC2Client({ region: 'sa-east-1' })
-const costExplorerClient = new CostExplorer('sa-east-1')
+const ec2Client = new EC2Client({ region: process.env.AWS_REGION })
+const costExplorerClient = new CostExplorer({ region: process.env.AWS_REGION })
 
 
 exports.handler = async (event) => {
@@ -40,7 +40,6 @@ async function doHandle(event) {
 
     verifySignature(signature, timestamp, PUBLIC_KEY, strBody)
 
-
     // Replying to ping (requirement 2.)
     const body = JSON.parse(strBody)
     
@@ -59,11 +58,11 @@ async function doHandle(event) {
         return "bar"
     }
 
-    if (body.data.name == 'startpalworld') {
+    if (body.data.name == 'startserver') {
         return await startServer(body, instanceId)
     }
 
-    if (body.data.name == 'stoppalworld') {
+    if (body.data.name == 'stopserver') {
         return await stopServer(body, instanceId)
     }
 

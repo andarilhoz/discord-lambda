@@ -15,14 +15,14 @@ let commands = [
     "description": "returns bar",
   },
   {
-    "name": "startpalworld",
+    "name": "startserver",
     "type": 1,
-    "description": "Initialize the PalworldServer",
+    "description": "Initialize the server",
   },
   {
-    "name": "stoppalworld",
+    "name": "stopserver",
     "type": 1,
-    "description": "Stop the PalworldServer",
+    "description": "Stop the server",
   },
   {
     "name": "status",
