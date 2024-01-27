@@ -3,8 +3,8 @@ const { CostExplorer, GetCostAndUsageCommand } = require('@aws-sdk/client-cost-e
 const nacl = require('tweetnacl');
 
 
-const ec2Client = new EC2Client({ region: process.env.AWS_REGION })
-const costExplorerClient = new CostExplorer({ region: process.env.AWS_REGION })
+const ec2Client = new EC2Client({ region: process.env.AWS_ECS_REGION })
+const costExplorerClient = new CostExplorer({ region: process.env.AWS_ECS_REGION })
 
 
 exports.handler = async (event) => {
@@ -87,8 +87,8 @@ async function getStatus(body, instanceId){
     })
     var description = await ec2Client.send(describeInstances)
     const ip = description.Reservations[0].Instances[0].PublicIpAddress
-    var response = `ip: ${ip}`
-    return response
+    const serverstate = description.Reservations[0].Instances[0].State.Name
+    return `ServerState: ${serverstate} ip: ${ip}`
 }
 
 async function startServer(body, instanceId) {
